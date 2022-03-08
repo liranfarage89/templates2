@@ -8,6 +8,8 @@ resource "null_resource" "null4" {
 }
 resource "null_resource" "null5" {
 }
+resource "null_resource" "null6" {
+}
 
 
 
