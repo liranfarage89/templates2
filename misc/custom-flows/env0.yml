@@ -1,0 +1,7 @@
+version: 1
+  type: number
+deploy:
+  steps:
+    setupVariables:
+      after:
+        - 'echo "foo-bar" > /opt/qa-opt-output-file.txt'
