@@ -10,12 +10,6 @@ variable "fake_sensitive_variable" {
 	sensitive = true 
 }
 
-variable "fake_sensitive_variable" { 
-	default = "foo"
-	description = "sensitive decsription"
-	sensitive = true 
-}
-
 resource "null_resource" "null" {}
 
 output default_region {
