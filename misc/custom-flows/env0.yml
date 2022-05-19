@@ -8,3 +8,4 @@ deploy:
       before:
         - echo "FOO VALUE IS $FOO"
         - cat $ENV0_ENV
+        - xargs < $ENV0_ENV
