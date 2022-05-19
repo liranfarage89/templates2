@@ -3,7 +3,7 @@ deploy:
   steps:
     setupVariables:
       after:
-        - echo "FOO=BAR BAZ" >> $ENV0_ENV'
+        - echo "FOO=BAR BAZ" >> $ENV0_ENV
     terraformInit:
       before:
         - echo "FOO VALUE IS $FOO"
