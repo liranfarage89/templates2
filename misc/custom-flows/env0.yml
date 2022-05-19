@@ -3,4 +3,7 @@ deploy:
   steps:
     setupVariables:
       after:
-        - 'echo "foo-bar" > /opt/qa-opt-output-file.txt'
+        - echo "FOO=BAR BAZ" >> $ENV0_ENV'
+    terraformInit:
+      before:
+        - echo "FOO VALUE IS $FOO"
