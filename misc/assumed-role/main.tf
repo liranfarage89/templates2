@@ -1,5 +1,5 @@
 module "temporary_assumed_role" {
-  source = "./modules/iam_assumed_role"
+  source = "./iam_assumed_role"
   name = "test_liran_temporary"
   iam_policies = [
     "arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess"
