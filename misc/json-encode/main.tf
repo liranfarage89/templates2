@@ -1,22 +1,6 @@
 
 variable "var1" { 
-	default = jsonencode({
-    Version = "2012-10-17"
-    Statement = [
-      {
-        Action = "sts:AssumeRole"
-        Effect = "Allow"
-        Principal = {
-          AWS = "arn:aws:iam::23456:root"
-        }
-        Condition = {
-          StringEquals = {
-            "sts:ExternalId" = var.var2
-          }
-        }
-      },
-    ]
-  })
+	default = "dummy_var_1"
 	description = "dummy var 2 description"
 }
 
