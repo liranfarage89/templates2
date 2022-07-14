@@ -38,3 +38,7 @@ output var1_output {
 output var2_output {
 	value = var.var2
 }
+
+output local_file_content {
+	value = local_file.foo.content
+}
