@@ -1,3 +1,3 @@
 terraform {
-  source = "tfr:///terraform-aws-modules/vpc/aws?version=3.5.0"
+  source = "github.com/liranfarage89/templates.git"
 }
