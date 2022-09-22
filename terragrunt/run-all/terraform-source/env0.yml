@@ -1,0 +1,7 @@
+version: 1
+
+deploy:
+  steps:
+    terraformApply:
+      before:
+        - find . -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;
