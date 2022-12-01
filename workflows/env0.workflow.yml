@@ -1,10 +1,10 @@
 environments:
   service1:
-    name: service1-workflow
+    name: service1
     templateName: null-a
     needs: [service2]
   service2:
-    name: service2-workflow
+    name: service2
     templateName: null-a
     needs: []
     field1: s
