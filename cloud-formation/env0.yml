@@ -1,0 +1,7 @@
+version: 2
+deploy:
+  steps:
+    cfCreateChangeSet:
+      before:
+        - name: Enforce Networking Policies  
+          run: cat $ENV0_CF_PARAMETERS_FILE
