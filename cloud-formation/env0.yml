@@ -14,6 +14,6 @@ deploy:
   steps:
     cfCreateChangeSet:
       before:
-        - |
-           echo '[{"ParameterKey": "Redeploy","ParameterValue": "bar"}]' > $ENV0_CF_PARAMETERS_FILE
+        #- echo '[{"ParameterKey": "Redeploy","ParameterValue": "bar"}]' > $ENV0_CF_PARAMETERS_FILE
+        - echo $ENV0_CF_PARAMETERS_FILE
         - cat $ENV0_CF_PARAMETERS_FILE
