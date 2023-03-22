@@ -4,4 +4,6 @@ deploy:
     cfCreateChangeSet:
       before:
         - name: Enforce Networking Policies  
-          run: cat $ENV0_CF_PARAMETERS_FILE
+          run: |
+            echo "ENV0_CF_PARAM_Comment=KMAC" >> $ENV0_ENV
+            #cat $ENV0_CF_PARAMETERS_FILE
