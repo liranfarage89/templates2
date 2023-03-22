@@ -1,9 +1,19 @@
-version: 2
+#version: 2
+#deploy:
+#  steps:
+#    cfCreateChangeSet:
+#     before:
+#        - name: Enforce Networking Policies  
+#          run: |
+#            echo "ENV0_CF_PARAM_Comment=KMAC" >> $ENV0_ENV
+#            #cat $ENV0_CF_PARAMETERS_FILE
+
+version: 1
+
 deploy:
   steps:
     cfCreateChangeSet:
       before:
-        - name: Enforce Networking Policies  
-          run: |
-            echo "ENV0_CF_PARAM_Comment=KMAC" >> $ENV0_ENV
-            #cat $ENV0_CF_PARAMETERS_FILE
+        - |
+           echo '[{"ParameterKey": "Redeploy","ParameterValue": "bar"}]' > $ENV0_CF_PARAMETERS_FILE
+        - cat $ENV0_CF_PARAMETERS_FILE
