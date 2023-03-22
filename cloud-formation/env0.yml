@@ -11,6 +11,9 @@
 version: 1
 
 deploy:
+  onCompletion:
+    - cat env0CfParameters.json
+
   steps:
     cfCreateChangeSet:
       before:
@@ -20,3 +23,4 @@ deploy:
         #- rm -f env0CfParameters.json
         - echo $ENV0_CF_PARAMETERS_FILE
         - cat $ENV0_CF_PARAMETERS_FILE
+    
