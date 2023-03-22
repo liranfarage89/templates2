@@ -14,7 +14,7 @@ deploy:
   steps:
     cfCreateChangeSet:
       before:
-        #- echo '[{"ParameterKey": "Redeploy","ParameterValue": "bar"}]' > $ENV0_CF_PARAMETERS_FILE
+        - echo '[{"ParameterKey": "Redeploy","ParameterValue": "bar"}]' > $ENV0_CF_PARAMETERS_FILE
         - echo "ENV0_CF_PARAM_Comment=KMAC" >> $ENV0_ENV
         #- rm -f env0CfParameters.json
         - echo $ENV0_CF_PARAMETERS_FILE
