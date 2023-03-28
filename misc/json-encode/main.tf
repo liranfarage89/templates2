@@ -1,5 +1,6 @@
 
 variable "var1" { 
+	type = "string"
 	default = "dummy_var_1"
 	description = "dummy var 2 description"
 }
