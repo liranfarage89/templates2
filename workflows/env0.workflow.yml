@@ -7,4 +7,3 @@ environments:
     name: service2
     templateName: null-a
     needs: []
-    field1: s
