@@ -1,0 +1,27 @@
+---
+version: 2
+deploy:
+  onCompletion:
+    - name: On Completion
+      run: echo omCompletion from parent
+    - name: On Completion
+      run: echo omCompletion from mid exec before
+    - name: On Completion
+      run: echo omCompletion from child
+    - name: On Completion
+      run: echo omCompletion from mid exec after
+      executeAfterChild: true
+    - name: On Completion
+      run: echo omCompletion from parent - execute after child
+      executeAfterChild: true
+
+  steps:
+    terraformPlan:
+      after:
+        - name: Security check using checkov
+          run: echo parent
+        - name: Security check using checkov from mid
+          run: echo mid
+        - name: Security check using checkov
+          run: echo child
+
