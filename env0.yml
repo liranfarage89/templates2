@@ -1,7 +1,12 @@
-version: 1
-
+---
+version: 2
 deploy:
+  onCompletion:
+    - name: On Completion
+      run: echo omCompletion from parent
   steps:
-    setupVariables:
+    terraformPlan:
       after:
-        - sleep ${SLEEP_IN_SECONDS:-60}
+        - name: Security check using checkov
+          run: echo parent
+
