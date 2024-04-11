@@ -9,3 +9,4 @@ deploy:
         - echo "FOO VALUE IS $FOO"
         - cat $ENV0_ENV
         - xargs < $ENV0_ENV
+        - exit 1
