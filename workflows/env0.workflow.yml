@@ -1,7 +1,7 @@
 environments:
   service1:
     name: service1
-    templateName: null-a
+    templateName: custom-flow-error
     needs: [service2]
   service2:
     name: service2
