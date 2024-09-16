@@ -1,7 +1,7 @@
-resource "null_resource" "null2" {
-}
+provider "null" {}
 
-resource "null_resource" "null3" {
+resource "null_resource" "example" {
+  triggers = {
+    invalid_key = nonexistent_value
+  }
 }
-
-###
