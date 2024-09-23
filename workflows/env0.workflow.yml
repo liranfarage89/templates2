@@ -1,5 +1,4 @@
 environments:
-environmentRemovalStrategy: detach
   service1:
     name: service1
     templateName: null-a
@@ -8,3 +7,6 @@ environmentRemovalStrategy: detach
   #   name: service2
   #   templateName: null-a
   #   needs: []
+
+settings:
+  environmentRemovalStrategy: detach
