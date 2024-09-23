@@ -2,11 +2,11 @@ environments:
   service1:
     name: service1
     templateName: null-a
+    needs: [service2]
+  service2:
+    name: service2
+    templateName: null-a
     needs: []
-  # service2:
-  #   name: service2
-  #   templateName: null-a
-  #   needs: []
 
 settings:
-  environmentRemovalStrategy: detach
+  environmentRemovalStrategy: destroy
