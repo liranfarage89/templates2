@@ -1,8 +1,8 @@
 environments:
-  service1:
-    name: service1-liran3
-    templateName: custom-flow-error
-    needs: [service2]
+  # service1:
+  #   name: service1-liran3
+  #   templateName: custom-flow-error
+  #   needs: [service2]
   service2:
     name: service2
     templateName: null-a
