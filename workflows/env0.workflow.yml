@@ -1,11 +1,11 @@
 environments:
-  service1:
-    name: service1-liran
-    templateName: custom-flow-error
-    needs: [service2]
+  # service1:
+  #   name: service1-liran2
+  #   templateName: custom-flow-error
+  #   needs: [service2]
   service2:
     name: service2
     templateName: null-a
     needs: []
-# settings:
-#   environmentRemovalStrategy: detach
+settings:
+  environmentRemovalStrategy: detach
