@@ -5,3 +5,5 @@ resource "null_resource" "null3" {
 }
 
 ###
+
+## merge-commit
