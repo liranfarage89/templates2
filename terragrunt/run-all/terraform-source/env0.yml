@@ -1,9 +1,0 @@
-version: 1
-
-deploy:
-  steps:
-    terraformApply:
-      before:
-        - sleep 500000
-#        - find . -type d -name ".terragrunt-cache" -prune -exec rm -rf {} \;
-        
