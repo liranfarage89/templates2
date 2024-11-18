@@ -1,3 +1,23 @@
 {
-"foo": []
+  "cluster_name": "preprod-dummy",
+  "env": "preprod",
+  "region": "eu-west-1",
+  "account_id": "123456789012",
+  "s3_bucket_arns": [
+    "arn:aws:s3:::dummy-airflow-logs",
+    "arn:aws:s3:::dummy-airflow-logs/*",
+    "arn:aws:s3:::dummy-cato",
+    "arn:aws:s3:::dummy-cato/*"
+  ],
+  "sqs_queue_arns": [
+    "arn:aws:sqs:eu-west-1:123456789012:dummy.fifo",
+    "arn:aws:sqs:eu-west-1:123456789012:dummy-queries.fifo",
+    "arn:aws:sqs:eu-west-1:123456789012:dummy-filter-queries.fifo",
+  ],
+  "emr_arns": [
+    "arn:aws:elasticmapreduce:*:123456789012:studio/*",
+    "arn:aws:elasticmapreduce:*:123456789012:editor/*",
+    "arn:aws:elasticmapreduce:*:123456789012:notebook-execution/*",
+    "arn:aws:elasticmapreduce:*:123456789012:cluster/*"
+  ]
 }
