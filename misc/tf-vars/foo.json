@@ -12,7 +12,7 @@
   "sqs_queue_arns": [
     "arn:aws:sqs:eu-west-1:123456789012:dummy.fifo",
     "arn:aws:sqs:eu-west-1:123456789012:dummy-queries.fifo",
-    "arn:aws:sqs:eu-west-1:123456789012:dummy-filter-queries.fifo",
+    "arn:aws:sqs:eu-west-1:123456789012:dummy-filter-queries.fifo"
   ],
   "emr_arns": [
     "arn:aws:elasticmapreduce:*:123456789012:studio/*",
