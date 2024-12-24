@@ -13,10 +13,12 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "tf-test-bucket-litan"
+  bucket = var.bucket_name
 
   tags = {
     Name        = "Lirans bucket"
     Environment = "Dev"
   }
 }
+
+variable "bucket_name" {}
