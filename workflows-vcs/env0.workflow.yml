@@ -1,0 +1,17 @@
+environments:
+  provision:
+    name: Terraform Environment
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: https://github.com/env0/templates
+      path: misc/null-resource
+  configure:
+    name: Configure Infrastructure
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: https://github.com/env0/templates
+      path: misc/null-resource
+    needs:
+      - provision
