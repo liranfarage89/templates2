@@ -3,14 +3,14 @@ environments:
     name: Helm Parent Environment
     vcs:
       type: 'helm'
-      helmVersion: 'latest'
+     # helmVersion: 'latest'
       repository: https://github.com/helm/examples
       path: charts/hello-world
   configure:
     name: Helm Child Infrastructure
     vcs:
       type: 'helm'
-      helmVersion: 'latest'
+    #  helmVersion: 'latest'
       repository: https://github.com/helm/examples
       path: charts/hello-world
     needs:
