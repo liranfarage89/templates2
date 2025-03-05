@@ -1,7 +1,7 @@
 deploy:
   steps:
     terraformPlan:
-      before:
+      after:
         - |
           if ! grep -q "No changes. Your infrastructure matches the configuration." env0_tf_plan.json; then
             echo ENV0_REQUIRES_APPROVAL=true >> $ENV0_ENV
