@@ -1,0 +1,16 @@
+deploy:
+  steps:
+    terraformPlan:
+      after:
+        - |
+          if grep -q "No changes. Infrastructure is up-to-date." env0_tf_plan.json; then
+            echo "No changes detected; skipping apply step."
+            exit 0
+          fi
+    terraformApply:
+      before:
+        - |
+          if grep -q "No changes. Infrastructure is up-to-date." env0_tf_plan.json; then
+            echo "Skipping apply as there are no infrastructure changes."
+            exit 0
+          fi
