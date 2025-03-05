@@ -1,16 +1,33 @@
 package env0
 
-# METADATA
-# title: Allow if no changes
-# description: Approve automatically if the plan has no changes
+import future.keywords.in
+import future.keywords.if
+#####
+# filename: cost-policy.rego
+# purpose: restrict users from deploying over a certain amount of (estimated) cost.
+# note: $30/month with cost_approvers hard_coded.
+#####
 
-# Allow execution if no changes are detected in the Terraform plan
-allow if {
-  no_changes_detected
+format(meta) := meta.description
+
+has_key(x, k) {
+	_ = x[k]
 }
 
-# Rule to check if all resources are "no-op"
-no_changes_detected {
-  not some i, j
-  input.plan.resource_changes[i].change.actions[j] != "no-op"
+
+allow if {
+  noop.allow
+}
+
+
+
+# METADATA
+# title: allow if no changes
+# description: approve automatically if the plan has no changes
+noop.allow if {
+  not any_resources_with_change
+}
+
+any_resources_with_change {
+  input.plan.resource_changes[_].change.actions[_] != "no-op"
 }
