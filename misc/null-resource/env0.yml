@@ -1,17 +1,17 @@
-deploy:
-  steps:
-    terraformPlan:
-      after:
-        - |
-          if ! grep -q "No changes. Your infrastructure matches the configuration." env0_tf_plan.json; then
-            echo ENV0_REQUIRES_APPROVAL=true >> $ENV0_ENV
-            exit 0
-          fi
-    # terraformApply:
-    #   before:
-    #     - |
-    #       exit 0
-    #       if grep -q "No changes. Your infrastructure matches the configuration." env0_tf_plan.json; then
-    #         echo "Skipping apply as there are no infrastructure changes."
-    #         exit 0
-    #       fi
+# deploy:
+#   steps:
+#     terraformPlan:
+#       after:
+#         - |
+#           if ! grep -q "No changes. Your infrastructure matches the configuration." env0_tf_plan.json; then
+#             echo ENV0_REQUIRES_APPROVAL=true >> $ENV0_ENV
+#             exit 0
+#           fi
+#     # terraformApply:
+#     #   before:
+#     #     - |
+#     #       exit 0
+#     #       if grep -q "No changes. Your infrastructure matches the configuration." env0_tf_plan.json; then
+#     #         echo "Skipping apply as there are no infrastructure changes."
+#     #         exit 0
+#     #       fi
