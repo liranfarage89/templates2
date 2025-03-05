@@ -3,6 +3,7 @@ deploy:
     terraformPlan:
       after:
         - |
+          exit 0
           if grep -q "No changes. Your infrastructure matches the configuration." env0_tf_plan.json; then
             echo "No changes detected; skipping apply step."
             exit 0
@@ -10,6 +11,7 @@ deploy:
     terraformApply:
       before:
         - |
+          exit 0
           if grep -q "No changes. Your infrastructure matches the configuration." env0_tf_plan.json; then
             echo "Skipping apply as there are no infrastructure changes."
             exit 0
