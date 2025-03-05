@@ -1,7 +1,7 @@
 package env0
 
 import future.keywords.if
-
+##
 # METADATA
 # title: Allow if no changes
 # description: Approve automatically if the plan has no changes
