@@ -1,17 +1,16 @@
 package env0
 
 # METADATA
-# title: allow if no changes
-# description: approve automatically if the plan has no changes
+# title: Allow if no changes
+# description: Approve automatically if the plan has no changes
 
+# Allow execution if there are no changes in the Terraform plan
 allow if {
-  noop.allow
-}
-
-noop.allow if {
   not any_resources_with_change
 }
 
+# Check if there are any resources with changes
 any_resources_with_change {
-  input.plan.resource_changes[_].change.actions[_] != "no-op"
+  some i, j
+  input.plan.resource_changes[i].change.actions[j] != "no-op"
 }
