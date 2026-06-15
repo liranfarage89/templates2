@@ -1,2 +1,2 @@
 resource "null_resource" "test" {}
-# dev round2 commit2: change apo-42-qa only (net diff)
+# re-qa round 1 (post-review-fixes): change only apo-42-qa
