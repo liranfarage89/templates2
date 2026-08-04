@@ -11,12 +11,8 @@ provider "aws" {
   region = "us-east-1"
 }
 
-variable "qa_prefix" {
-  type = string
-}
-
 resource "aws_ssm_parameter" "solo" {
-  name  = "/eng2258/${var.qa_prefix}/solo"
+  name  = "/eng2258/${terraform.workspace}/solo"
   type  = "String"
   value = "initial-solo"
 }

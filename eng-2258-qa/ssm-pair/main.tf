@@ -11,23 +11,18 @@ provider "aws" {
   region = "us-east-1"
 }
 
-variable "qa_prefix" {
-  type = string
-}
-
 resource "aws_ssm_parameter" "alpha" {
-  name  = "/eng2258/${var.qa_prefix}/alpha"
+  name  = "/eng2258/${terraform.workspace}/alpha"
   type  = "String"
   value = "initial-alpha"
 }
 
 resource "aws_ssm_parameter" "beta" {
-  name  = "/eng2258/${var.qa_prefix}/beta"
+  name  = "/eng2258/${terraform.workspace}/beta"
   type  = "String"
   value = "initial-beta"
 }
 
 module "child" {
-  source    = "./child"
-  qa_prefix = var.qa_prefix
+  source = "./child"
 }

@@ -8,4 +8,4 @@ Throwaway templates for the Drift Actions QA block (Linear ENG-2258).
 | `ssm-single` | One `aws_ssm_parameter`. Drift on, drift off, for the clean-scan / `fixType` matrix. |
 | `pinned` | Pinned `local` provider and a pinned registry module. Bumping the pins on a later commit produces `unappliedCommit`, `providerVersionChange` and `moduleVersionChange` without touching a cloud. `env0.yml` deletes the file after apply so every scan drifts. |
 
-Every environment must set the terraform variable `qa_prefix` to something unique.
+Resource names are keyed on `terraform.workspace`, so no per-environment variable is needed.
