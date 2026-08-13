@@ -3,3 +3,7 @@ environments:
     name: node-a
     templateName: apo500-null-a
     workspace: apo500-shared-ws
+  node-b:
+    name: node-b
+    templateName: apo500-null-b
+    workspace: apo500-shared-ws
