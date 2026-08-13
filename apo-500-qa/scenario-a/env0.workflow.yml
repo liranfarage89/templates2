@@ -1,0 +1,9 @@
+environments:
+  node-a:
+    name: node-a
+    workspace: apo500-shared-ws
+    vcs:
+      type: 'terraform'
+      terraformVersion: '1.5.7'
+      repository: https://github.com/liranfarage89/templates2
+      path: apo-500-qa/ok
