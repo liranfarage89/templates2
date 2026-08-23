@@ -1,0 +1,13 @@
+environments:
+  unquoted:
+    name: unquoted
+    templateName: apo613-null
+    requiresApproval: ${REQUIRES_APPROVAL}
+  quoted:
+    name: quoted
+    templateName: apo613-null
+    requiresApproval: "${REQUIRES_APPROVAL}"
+  hardcoded:
+    name: hardcoded
+    templateName: apo613-null
+    requiresApproval: false
