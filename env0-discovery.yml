@@ -1,0 +1,5 @@
+environments:
+  apo678:
+    name: apo678-discovered
+    projectName: My First Project
+    templateName: apo678-null
