@@ -1,0 +1,5 @@
+environments:
+  apo678verify:
+    name: apo678-verify
+    projectId: 9eee1e56-8984-47ab-a3ec-b667031c05c0
+    templateName: apo678-null
