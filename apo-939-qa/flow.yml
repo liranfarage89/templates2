@@ -1,6 +1,0 @@
-version: 2
-deploy:
-  steps:
-    terraformPlan:
-      before:
-        - echo apo-939
