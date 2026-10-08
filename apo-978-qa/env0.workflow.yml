@@ -2,10 +2,6 @@ environments:
   a:
     name: apo978-a
     templateName: apo978-null
-  b:
-    name: apo978-b
-    templateName: apo978-null
-    needs: [a]
 
 settings:
   environmentRemovalStrategy: destroy
